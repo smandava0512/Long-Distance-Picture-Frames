@@ -2,15 +2,21 @@ import './App.css';
 
 function App() {
   return (
-    <div className="home-screen">
-      <h1>Select Frame</h1>
-      
-      <button className="frame-button">Home Frame</button>
+    <div style={{position : 'relative'}}>
+      <div className="home-screen">
 
-      <button className="frame-button">Remote Frame</button>
+      <div>
+        <h1>Select Frame</h1>
+      </div>
 
+      <div>
+        <button className="frame-button">Home Frame</button>
+        <button className="frame-button">Remote Frame</button>
+      </div>
+
+      </div>
     </div>
-  );
+    );
 }
 
 export default App;
