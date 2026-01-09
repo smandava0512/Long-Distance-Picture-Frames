@@ -10,7 +10,7 @@ function App() {
           <h1>Select Frame</h1>
         </div>
 
-        <div>
+        <div className="buttons-container">
 
           <button
             className="frame-button"
@@ -26,6 +26,10 @@ function App() {
               alt="Home Frame"
               style={{ width: 200 }}
             />
+
+            <p>
+              Home Frame
+            </p>
           </button>
 
           <button
@@ -42,6 +46,10 @@ function App() {
               alt="Remote Frame"
               style={{ width: 200 }}
             />
+
+            <p>
+              Remote Frame
+            </p>
           </button>
 
         </div>

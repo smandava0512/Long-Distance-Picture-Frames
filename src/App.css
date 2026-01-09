@@ -1,5 +1,4 @@
 .home-screen{
-  background-color: azure;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,12 +8,19 @@
 h1{
   font-size: 48px;
   color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-bottom: 20px;
+  margin-top: 60px;
 }
 
-button{
+.buttons-container{
   padding: 10px 20px;
   font-size: 18px;
   margin-top: 20px;
   cursor: pointer;
+    .force-new-line{
+    display: block;
+  }
 }
+
 
