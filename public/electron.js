@@ -15,6 +15,8 @@ function createMainWindow() {
         slashes: true
     });
 
+    mainWindow.setMenuBarVisibility(false);
+
     mainWindow.loadURL(startUrl);
 
 }
