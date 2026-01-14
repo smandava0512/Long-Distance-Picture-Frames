@@ -1,38 +1,44 @@
 import './App.css';
-import blankFrame from './assets/frame-blank.png';
+import blankFrame from './assets/frame-blank.jpg';
 import React, {useRef, useState} from 'react';
 
 function App() {
 
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const remoteInputRef = useRef<HTMLInputElement>(null);
+  const homeInputRef = useRef<HTMLInputElement>(null);
 
-  const handleButtonClick = () => {
-    fileInputRef.current?.click();
-  };
+  const [homeImg, setHomeImg] = useState<string | null>(null);
+  const [remoteImg, setRemoteImg] = useState<string | null>(null);
 
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
+  const handleHomeClick = () => homeInputRef.current?.click();
+  const handleRemoteClick = () => remoteInputRef.current?.click();
+
+  const handleHomeFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
     if (file) {
-      setSelectedImage(URL.createObjectURL(file));
+      setHomeImg(URL.createObjectURL(file));
     }
   };
+    const handleRemoteFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setRemoteImg(URL.createObjectURL(file));
+    }
+  };
+
 
   return (
     <div style={{ position: 'relative' }}>
       <div className="home-screen">
-
         <div>
           <h1>Select Frame</h1>
         </div>
 
         <div className="buttons-container">
-            <p>
-              🏡Home Frame🏠
-            </p>
 
           <button
-            onClick={handleButtonClick}
+
+            onClick={handleHomeClick}
             className="frame-button"
             style={{
               border: 'none',
@@ -41,29 +47,27 @@ function App() {
               cursor: 'pointer',
             }}
           >
-          <div className = 'frame-container'>
             <img 
-              src={blankFrame}
+              src={homeImg ?? blankFrame}
               alt="Home Frame"
             />
-          </div>
-
-          </button>
 
             <p>
-              📲Remote Frame📨
+              Home Frame
             </p>
+
+          </button>
             
           <input
             type="file"
-            ref={fileInputRef}
+            ref={homeInputRef}
             style={{ display: 'none' }}
             accept="image/*"
-            onChange={handleFileChange}
+            onChange={handleHomeFile}
           />
 
         <button
-            onClick={handleButtonClick}
+            onClick={handleRemoteClick}
             className="frame-button"
             style={{
               border: 'none',
@@ -72,22 +76,24 @@ function App() {
               cursor: 'pointer',
             }}
           >
-          <div className = 'frame-container'>
             <img 
-              src={blankFrame}
+              src={remoteImg ?? blankFrame}
               alt="Home Frame"
             />
+
             
-          </div>
+            <p>
+              Remote Frame
+            </p>
 
           </button>
 
           <input
             type="file"
-            ref={fileInputRef}
+            ref={remoteInputRef}
             style={{ display: 'none' }}
             accept="image/*"
-            onChange={handleFileChange}
+            onChange={handleRemoteFile}
           />
 
         </div>
