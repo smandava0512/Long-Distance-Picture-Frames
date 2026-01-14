@@ -1,5 +1,5 @@
 import './App.css';
-import blankFrame from './assets/blankFrame.jpg';
+import blankFrame from './assets/frame-blank.png';
 import React, {useRef, useState} from 'react';
 
 function App() {
@@ -27,6 +27,9 @@ function App() {
         </div>
 
         <div className="buttons-container">
+            <p>
+              🏡Home Frame🏠
+            </p>
 
           <button
             onClick={handleButtonClick}
@@ -46,12 +49,12 @@ function App() {
             />
           </div>
 
-            <p>
-              Home Frame
-            </p>
-
           </button>
 
+            <p>
+              📲Remote Frame📨
+            </p>
+            
           <input
             type="file"
             ref={fileInputRef}
@@ -79,9 +82,6 @@ function App() {
             
           </div>
 
-            <p>
-              Remote Frame
-            </p>
           </button>
 
           <input

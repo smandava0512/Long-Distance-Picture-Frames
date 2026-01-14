@@ -29,5 +29,12 @@ p{
   margin-top: 10px;
 }
 
+img{
+  border: #333;
+  border-width: 0cap;
+  border-style: ridge;
+  box-shadow: #666;
+}
+
 
 
