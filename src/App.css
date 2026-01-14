@@ -29,10 +29,10 @@ h1{
 
 
 p{
-  margin-top: 50x;
+  margin-top: 75x;
   font-size:16px;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
-  color: #623a55;
+  color: #4686e0;
 
 }
 
@@ -40,7 +40,7 @@ img{
   border: #000000;
   border-width: thick;
   border-style: ridge;
-  box-shadow: 10px 10px 10px rgb(175, 209, 219);
+  box-shadow: 10px 10px 10px rgba(96, 125, 134, 0.4);
   height:350px;
   width: 196.875px;
 }
