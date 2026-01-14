@@ -45,7 +45,6 @@ function App() {
             <img 
               src={blankFrame}
               alt="Home Frame"
-              style={{ width: 360 }}
             />
           </div>
 
@@ -77,7 +76,6 @@ function App() {
             <img 
               src={blankFrame}
               alt="Home Frame"
-              style={{ width: 360 }}
             />
             
           </div>

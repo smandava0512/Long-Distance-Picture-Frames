@@ -26,14 +26,14 @@ p{
   font-style: bold;
   color: #666;
   font-family: Helvetica, sans-serif;
-  margin-top: 10px;
 }
 
 img{
   border: #333;
-  border-width: 0cap;
+  border-width: 50pix;
   border-style: ridge;
   box-shadow: #666;
+  height: 500px;
 }
 
 
