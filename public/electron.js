@@ -1,15 +1,6 @@
 const {app, BrowserWindow} = require('electron');
 const url = require('url');
 const path = require('path');
-const { ipcRenderer, contextBridge } = require('electron');
-
-contextBridge.exposeInMainWorld('electron', {
-  ipcRenderer: {
-    send: (channel, data) => ipcRenderer.send(channel, data),
-    on: (channel, func) => ipcRenderer.on(channel, (event, ...args) => func(...args)),
-  },
-});
-
 
 function createMainWindow() {
     const mainWindow = new BrowserWindow({
@@ -23,9 +14,8 @@ function createMainWindow() {
         protocol: 'file:',
         slashes: true
     });
-
+  
     mainWindow.setMenuBarVisibility(false);
-
     mainWindow.loadURL(startUrl);
 
 }
